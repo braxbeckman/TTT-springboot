@@ -30,11 +30,11 @@ dependencies {
 //	testRuntimeOnly('org.junit.vintage:junit-vintage-engine:5.4.0')
 }
 
-tasks.named('test') {
-	useJUnitPlatform()
-}
+//tasks.named('test') {
+//	useJUnitPlatform()
+//}
 
-tasks.withType(Test) {
+tasks.withType(Test).configureEach {
 	useJUnitPlatform()
 	testLogging {
 		exceptionFormat "full"
